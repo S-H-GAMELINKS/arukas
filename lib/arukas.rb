@@ -1,4 +1,5 @@
 require "arukas/version"
+require "arukas/api"
 
 module Arukas
   class Error < StandardError; end
