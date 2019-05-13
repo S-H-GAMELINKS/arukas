@@ -11,4 +11,9 @@ class ArukasTest < Minitest::Test
   def test_init_arukas
     refute_nil Arukas::API::new(ENV["ARUKAS_JSON_API_TOKEN"], ENV["ARUKAS_JSON_API_SECRET"])
   end
+
+  def test_get_arukas_apps
+    refute_nil @arukas = Arukas::API::new(ENV["ARUKAS_JSON_API_TOKEN"], ENV["ARUKAS_JSON_API_SECRET"])
+    assert @arukas.get_apps != nil
+  end
 end
