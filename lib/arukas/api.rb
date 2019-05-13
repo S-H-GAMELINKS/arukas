@@ -18,5 +18,9 @@ module Arukas
         def get_app(id)
             RestClient.get @url + "#{id}"
         end
+
+        def delete_app(id)
+            RestClient.delete @url + "#{id}"
+        end
     end
 end
