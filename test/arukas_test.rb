@@ -27,4 +27,9 @@ class ArukasTest < Minitest::Test
     json = File.read("test.json")
     res = @arukas.create_apps(json)
   end
+
+  def test_get_arukas_app
+    res = @arukas.get_app(id)
+    assert res != nil  
+  end
 end
