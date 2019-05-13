@@ -20,12 +20,13 @@ class ArukasTest < Minitest::Test
 
   def test_get_arukas_apps
     res = @arukas.get_apps
-    assert @arukas.get_apps != nil
+    assert res != nil
   end
 
   def test_post_arukas_apps
     json = File.read("test.json")
     res = @arukas.create_apps(json)
+    assert res != nil
   end
 
   def test_get_arukas_app
