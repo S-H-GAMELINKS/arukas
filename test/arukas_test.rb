@@ -35,4 +35,10 @@ class ArukasTest < Minitest::Test
     res = @arukas.get_app(id)
     assert res != nil  
   end
+
+  def test_delete_arukas_app
+    res = @arukas.get_apps
+    images = JSON.parse(res)["data"]
+    images.each{|image| assert @arukas.delete_app(image["id"]) != nil}
+  end
 end
