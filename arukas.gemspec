@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = "Arukas Ruby Client"
   spec.description   = "Arukas Ruby Client"
-  spec.homepage      = "https://github.com/S-H-GAMELINKS/arukas"
+  spec.homepage      = "https://github.com/S-H-GAMELINKS"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
