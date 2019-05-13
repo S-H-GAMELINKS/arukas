@@ -1,0 +1,51 @@
+{
+    "data":{
+      "type": "apps",
+      "attributes": {
+        "name": "myapp"
+      },
+      "relationships": {
+        "services": {
+          "data": [
+            {
+              "lid": "1",
+              "type": "services"
+            }
+          ]
+        }
+      }
+    },
+    "included": [
+      {
+        "lid": "1",
+        "type": "services",
+        "attributes": {
+          "command": "",
+          "custom-domain": "",
+          "image": "nginx",
+          "instances": 1,
+          "ports": [
+            {
+              "number": "80",
+              "protocol": "tcp"
+            },
+            {
+              "number": "443",
+              "protocol": "tcp"
+            }
+          ],
+          "environment": [
+          ],
+          "subdomain": ""
+        },
+        "relationships": {
+          "service-plan": {
+            "data": {
+              "type": "service-plans",
+              "id": "jp-tokyo/hobby"
+            }
+          }
+        }
+      }
+    ]
+}

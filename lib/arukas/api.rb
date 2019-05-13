@@ -1,4 +1,5 @@
 require "rest-client"
+require "json"
 
 module Arukas
     class API
@@ -8,6 +9,10 @@ module Arukas
 
         def get_apps
             RestClient.get @url
+        end
+
+        def create_apps(params)
+            RestClient.post @url, payload=params, {:content_type => :json}
         end
     end
 end
