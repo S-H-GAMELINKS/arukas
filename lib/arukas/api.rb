@@ -1,14 +1,13 @@
-require "net/http"
-require "uri"
+require "rest-client"
 
 module Arukas
     class API
         def initialize(token, secret)
-            @uri = URI.parse("https://#{token}:#{secret}@app.arukas.io/api/apps/")
+            @url = "https://#{token}:#{secret}@app.arukas.io/api/apps/"
         end
 
         def get_apps
-            Net::HTTP.get_response(@uri)
+            RestClient.get @url
         end
     end
 end
