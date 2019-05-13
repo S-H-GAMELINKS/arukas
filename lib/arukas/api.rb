@@ -14,5 +14,9 @@ module Arukas
         def create_apps(params)
             RestClient.post @url, payload=params, {:content_type => :json}
         end
+
+        def get_app(id)
+            RestClient.get @url + "#{id}"
+        end
     end
 end
