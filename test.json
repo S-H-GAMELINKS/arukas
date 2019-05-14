@@ -42,7 +42,7 @@
           "service-plan": {
             "data": {
               "type": "service-plans",
-              "id": "jp-tokyo/hobby"
+              "id": "jp-tokyo/free"
             }
           }
         }
