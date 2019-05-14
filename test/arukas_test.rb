@@ -30,6 +30,7 @@ class ArukasTest < Minitest::Test
   end
 
   def test_get_arukas_app
+    @arukas.create_apps(File.read("test.json"))
     res = @arukas.get_apps
     id = JSON.parse(res)["data"][0]["id"]
     res = @arukas.get_app(id)
