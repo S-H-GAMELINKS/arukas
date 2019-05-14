@@ -8,6 +8,7 @@ class ArukasTest < Minitest::Test
 
   def setup
     @arukas = Arukas::API::new(ENV["ARUKAS_JSON_API_TOKEN"], ENV["ARUKAS_JSON_API_SECRET"])
+    @json = File.read("test.json")
   end
 
   def test_that_it_has_a_version_number
@@ -24,13 +25,12 @@ class ArukasTest < Minitest::Test
   end
 
   def test_post_arukas_apps
-    json = File.read("test.json")
-    res = @arukas.create_apps(json)
+    res = @arukas.create_apps(@json)
     assert res != nil
   end
 
   def test_get_arukas_app
-    @arukas.create_apps(File.read("test.json"))
+    @arukas.create_apps(@json)
     res = @arukas.get_apps
     id = JSON.parse(res)["data"][0]["id"]
     res = @arukas.get_app(id)
