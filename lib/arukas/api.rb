@@ -38,5 +38,9 @@ module Arukas
         def power_on_service(id)
             RestClient.post @url + "services/#{id}/power"
         end
+
+        def power_off_service(id)
+            RestClient.delete @url + "services/#{id}/power"
+        end
     end
 end
