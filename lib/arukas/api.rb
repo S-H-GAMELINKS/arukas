@@ -26,5 +26,9 @@ module Arukas
         def get_services
             RestClient.get @url + "services/"
         end
+
+        def get_service(id)
+            RestClient.get @url + "services/#{id}"
+        end
     end
 end
