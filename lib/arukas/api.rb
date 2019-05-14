@@ -30,5 +30,9 @@ module Arukas
         def get_service(id)
             RestClient.get @url + "services/#{id}"
         end
+
+        def patch_service(id, params)
+            RestClient.post @url + "services/#{id}", payload=params, {:content_type => :json}
+        end
     end
 end
