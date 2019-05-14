@@ -55,4 +55,12 @@ class ArukasTest < Minitest::Test
     res = @arukas.get_service(id)
     assert res != nil  
   end
+
+  def test_patch_arukas_service
+    @arukas.create_apps(File.read("test.json"))
+    res = @arukas.get_services
+    id = JSON.parse(res)["data"][0]["id"]
+    res = @arukas.patch_service(id, @json)
+    assert res != nil
+  end
 end
