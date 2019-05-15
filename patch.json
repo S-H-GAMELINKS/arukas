@@ -1,0 +1,33 @@
+{
+    "data": {
+      "id": "18db92c4-3984-466e-89bd-b49f924a7210",
+      "type": "services",
+      "attributes": {
+        "app-id": "97335e05-6cd0-42f5-a502-daca5f7b6d89",
+        "image": "wordpress",
+        "command": null,
+        "instances": 3,
+        "environment": null,
+        "ports": [
+          {
+            "protocol": "tcp",
+            "number": 80
+          }
+        ]
+      },
+      "relationships": {
+        "app": {
+          "data": {
+            "id": "97335e05-6cd0-42f5-a502-daca5f7b6d89",
+            "type": "apps"
+          }
+        },
+        "service-plan": {
+          "data": {
+            "id": "jp-develop/standard-1",
+            "type": "service-plans"
+          }
+        }
+      }
+    }
+  }

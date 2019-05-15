@@ -32,11 +32,11 @@ module Arukas
         end
 
         def patch_service(id, params)
-            RestClient.post @url + "services/#{id}", payload=params, {:content_type => :json}
+            RestClient.patch @url + "services/#{id}", payload=params.to_json, {:content_type => :json, :accept => :json}
         end
 
         def power_on_service(id)
-            RestClient.post @url + "services/#{id}/power"
+            RestClient.post @url + "services/#{id}/power", payload="", {:content_type => :json}
         end
 
         def power_off_service(id)
